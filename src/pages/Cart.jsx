@@ -1,7 +1,13 @@
+import { LuCarTaxiFront } from 'react-icons/lu';
 import { useCart } from '../CartContext';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
   const { cart, removeFromCart } = useCart(); 
+  const navigate=useNavigate()
 
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
@@ -56,7 +62,8 @@ function Cart() {
           </Col>
         </Row>
       </Container>
-      <Footer />
+      <Footer/>
     </>
   );
 }
+export default Cart

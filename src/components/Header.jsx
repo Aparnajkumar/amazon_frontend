@@ -8,6 +8,7 @@ import {
   Button,
 } from "react-bootstrap";
 import { FaShoppingCart, FaMapMarkerAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -43,10 +44,10 @@ function Header() {
 
           {/* Right Menu */}
           <Nav className="align-items-center">
-            <Nav.Link>
-              <small>Hello, Sign in</small>
-              <div className="fw-bold">Account & Lists</div>
-            </Nav.Link>
+              <Nav.Link>
+                <Link to={"/auth"}><small>Hello, Sign in</small></Link>
+                <div className="fw-bold">Account & Lists</div>
+              </Nav.Link>
 
             <Nav.Link>
               <small>Returns</small>
@@ -54,8 +55,10 @@ function Header() {
             </Nav.Link>
 
             <Nav.Link className="d-flex align-items-center">
-              <FaShoppingCart size={22} />
-              <span className="fw-bold ms-1">Cart</span>
+<Link to={"/cart"}>
+                <FaShoppingCart size={22} />
+  
+</Link>              <span className="fw-bold ms-1">Cart</span>
             </Nav.Link>
           </Nav>
         </Container>
