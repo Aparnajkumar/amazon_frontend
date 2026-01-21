@@ -2,7 +2,7 @@ import { LuCarTaxiFront } from 'react-icons/lu';
 import { useCart } from '../CartContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 function Cart() {

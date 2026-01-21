@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useCart } from '../CartContext';
 
 function ProductDetails({ products }) {
   const { id } = useParams();
@@ -15,6 +16,7 @@ function ProductDetails({ products }) {
   const handleAddToCart = () => {
     addToCart(product); 
     alert("Added to cart!");
+    navigate("/cart")
   };
 
   return (
